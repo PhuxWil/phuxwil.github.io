@@ -112,11 +112,18 @@ img {
 
 /* Projects Section */
 #projects {
-    font-family: 'Arthemysdisplay', 'sans-serif';
     padding: 60px 0;
     background-color: #ffffff;
 }
-
+#projects h2 {
+    font-size: 36px;
+    font-family: 'Arthemysdisplay', 'sans-serif';
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: -2px;
+    color: #2c3e50;
+    text-align: center;
+}
 .project-list {
     display: grid;
     grid-template-columns: 1fr; /* Single column by default */
