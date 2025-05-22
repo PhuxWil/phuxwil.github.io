@@ -1,0 +1,409 @@
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Consider 'Lato', 'Roboto', 'Open Sans' from Google Fonts */
+    line-height: 1.7;
+    color: #333; /* Default text color */
+    background-color: #ffffff;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0; /* Vertical padding for sections with .container */
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #333; /* Default heading color */
+}
+
+/* General heading sizes, can be overridden */
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: #555; /* Default paragraph color */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero Section */
+#hero {
+    background: white;
+    min-height: 80vh; /* Adjusted height slightly, can be 90vh */
+    display: flex;
+    justify-content: center; /* Horizontally center .hero-content */
+    align-items: center;   /* Vertically center .hero-content */
+    padding: 60px 20px;    /* Increased padding for more space */
+    position: relative;
+    /* color: #ffffff; removed as text color is black and background is white */
+}
+
+#hero .hero-content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 50px; /* Space between image and text block */
+    width: 85%; /* Control overall width */
+    max-width: 1200px; /* Max width for larger screens */
+}
+
+#hero .profile-picture {
+    width: 500px; /* Profile picture size */
+    height: 700px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 6px solid #f0f0f0; /* Slightly off-white border for depth */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevent image from shrinking too much */
+    /* margin-bottom: 25px; Removed - not needed for side-by-side */
+}
+
+#hero .hero-text-content {
+    flex-grow: 1; /* Allows text block to take available space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+#hero h1 {
+    color: #000000;
+    margin-bottom: 0.75rem;
+    font-family: 'Arthemysdisplay', 'serif'; 
+    font-weight: 500;
+    font-size: 80px; /* Slightly adjusted from 84px for balance */
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-align: left; /* Explicitly left */
+}
+
+#hero .tagline {
+    color: #000000;
+    margin-bottom: 30px; /* More space before CTA */
+    font-family: 'Arthemysdisplay', 'serif'; 
+    font-weight: 300;
+    font-size: 20px; /* Adjusted from 30px for balance */
+    line-height: 1.4;
+    text-align: left; /* Explicitly left */
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 40px;
+}
+
+.project-item {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Default stack for mobile */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-item .project-info {
+    padding: 25px;
+    flex-grow: 1; /* Allows info to fill space if items have uneven text */
+}
+
+.project-item .project-info h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.project-link {
+    margin-right: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px; /* Increased top margin */
+}
+
+.project-link i {
+    margin-left: 5px;
+}
+
+
+/* Resume Section */
+.resume-content-area { /* Was .resume-layout-container */
+    max-width: 1100px; /* Max width of the resume content area */
+    margin: 20px auto;   /* Center the resume on the page */
+    padding: 30px 40px; /* Padding inside the white resume area */
+    background-color: #ffffff; /* White background for the resume content */
+    /* border and box-shadow removed previously */
+}
+
+/* Styles for resume-header, resume-header h1, contact-info are REMOVED */
+
+.resume-body-columns {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Space between main column and sidebar */
+}
+
+.resume-main-column { /* For Experience */
+    flex: 2; /* Takes up 2/3 of the space */
+    min-width: 300px; /* Minimum width before wrapping or shrinking too much */
+}
+
+.resume-sidebar-column { /* For Education and Skills */
+    flex: 1; /* Takes up 1/3 of the space */
+    min-width: 280px; /* Minimum width */
+}
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section:last-child { /* Remove bottom margin from the last section in sidebar */
+    margin-bottom: 0;
+}
+
+.resume-section h2 {
+    display: flex;
+    flex-direction: left;
+    font-family: 'Arthemysdisplay', 'sans-serif';
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: -2px;
+    color: var(--primary-text-color);
+}
+
+.education-entry,
+.experience-entry {
+    margin-bottom: 20px;
+}
+
+.education-entry h3 { /* For degree program name */
+    font-size: 1.15em;
+    color: #2c3e50;
+    margin-bottom: 3px;
+}
+.experience-entry h4 { /* For job titles */
+    font-size: 1.15em;
+    color: #2c3e50;
+    margin-bottom: 3px;
+}
+
+.institution,
+.company-info {
+    font-size: 1em;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.institution strong,
+.company-info strong {
+    font-style: normal;
+    color: #444;
+}
+
+.degree,
+.date {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.experience-entry ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 5px;
+}
+
+.experience-entry ul li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.skills-category {
+    margin-bottom: 10px;
+}
+
+.skills-category p {
+    font-size: 1em;
+    color: #444;
+}
+
+.skills-category p strong {
+    color: #333;
+}
+
+
+/* Footer with Socials */
+footer {
+    background: #ffffff; /* White background - CORRECT */
+    color: #000000;     /* Default text color for footer changed to BLACK */
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer p { /* Target p tags specifically within footer */
+    color: #000000;     /* Text color for paragraphs changed to BLACK */
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 15px auto; /* Center the ul and add bottom margin */
+    display: inline-block;    /* Allows centering of the block of links */
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.social-links a {
+    color: #000000;     /* Icon/link color changed to BLACK */
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;     /* Hover color (blue) - this is fine and will contrast with white */
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+
+/* Medium devices (tablets, landscape phones) */
+@media (max-width: 992px) {
+    #hero .hero-content {
+        gap: 30px; /* Reduce gap */
+        width: 90%;
+    }
+    #hero .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+    #hero h1 {
+        font-size: 60px; /* Responsive font size */
+    }
+    #hero .tagline {
+        font-size: 24px; /* Responsive font size */
+    }
+
+    /* For project items, start stacking image and text sooner if preferred */
+    /* .project-item { flex-direction: column; } */
+    /* .project-item img { width: 100%; height: 220px; } */
+    /* .project-item .project-info { width: 100%; padding: 20px; } */
+}
+
+
+/* Small devices (portrait tablets and large phones) */
+@media (min-width: 768px) {
+    /* Project items: image on left, text on right */
+    .project-list {
+        /* If you want a 2-column grid for projects on tablets and up */
+         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    }
+    .project-item {
+        /* This rule allows image and text to be side-by-side if the grid cell is wide enough */
+        /* If you prefer them always side-by-side in a single column list on tablet, */
+        /* ensure .project-list is 'grid-template-columns: 1fr;' and then apply: */
+        flex-direction: row;
+    }
+
+    .project-item img {
+        width: 40%; /* Adjust as needed for side-by-side */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 280px; /* Optional constraint */
+    }
+
+    .project-item .project-info {
+        width: 60%; /* Adjust as needed */
+        padding: 30px;
+    }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 767px) {
+    #hero {
+        min-height: auto; /* Let content define height */
+        padding: 40px 15px;
+    }
+    #hero .hero-content {
+        flex-direction: column; /* Stack image and text */
+        text-align: center; /* Center text when stacked */
+        gap: 25px; /* Adjust gap for stacked layout */
+        width: 100%;
+    }
+    #hero .profile-picture {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 0; /* Gap handles spacing */
+    }
+    #hero .hero-text-content {
+        align-items: center; /* Center text content */
+    }
+    #hero h1 {
+        font-size: 48px;
+        text-align: center; /* Ensure h1 is centered */
+    }
+    #hero .tagline {
+        font-size: 20px;
+        text-align: center; /* Ensure tagline is centered */
+        margin-bottom: 25px;
+    }
+
+    /* Headings generally smaller on mobile */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 30px; }
+    h3 { font-size: 1.3rem; }
+
+    /* Project items on mobile will be stacked by default due to .project-item flex-direction: column */
+    /* No specific change needed here unless you overrode it for larger screens and need to revert */
+    .project-item img {
+        width: 100%; /* Ensure full width when stacked */
+        height: 220px;
+    }
+    .project-item .project-info {
+        width: 100%; /* Ensure full width */
+        padding: 20px;
+    }
+}
