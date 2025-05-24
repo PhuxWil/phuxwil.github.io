@@ -50,16 +50,34 @@ img {
     display: block;
 }
 
+header {
+    width: 100%;
+    padding: 35px 20px;
+    box-sizing: border-box; 
+    background-color: #ffffff; 
+    position: relative;   
+}
+#logo {
+    position: fixed; 
+    top: 20px;        
+    left: 20px;        
+    height: 30px;   
+    width: 34px;   
+    z-index: 1001;
+}    
 /* Hero Section */
 #hero {
-    background: white;
-    min-height: 80vh; /* Adjusted height slightly, can be 90vh */
+    padding-top: 130px;     /* This is your offset for the fixed header */
+    padding-right: 20px;    /* Keeps the horizontal padding from your original rule */
+    padding-bottom: 60px;   /* Keeps the bottom padding from your original rule */
+    padding-left: 20px;     /* Keeps the horizontal padding from your original rule */
+
+    background: rgb(255, 255, 255);
+    min-height: 80vh;
     display: flex;
-    justify-content: center; /* Horizontally center .hero-content */
-    align-items: center;   /* Vertically center .hero-content */
-    padding: 60px 20px;    /* Increased padding for more space */
+    justify-content: center;
+    align-items: center;
     position: relative;
-    /* color: #ffffff; removed as text color is black and background is white */
 }
 
 #hero .hero-content {
