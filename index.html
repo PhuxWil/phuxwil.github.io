@@ -10,7 +10,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="16x16" href="pictures/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
-   
 </head>
 <body>
     <header>
@@ -18,83 +17,178 @@
     </header>
 
     <section id="hero">
-            <div class="hero-content">
-                <img src="pictures/my_pic.jpg" alt="Wilson Phu" class="profile-picture">
+        <div class="hero-content">
+            <img src="pictures/my_pic.jpg" alt="Wilson Phu" class="profile-picture">
                 <div id="hero-text-content"> 
                     <h1 data-animate-text-target>Hi, I'm Wilson</h1>
                     <p class="tagline" data-animate-text-target>Driven and curious student at Fordham and Columbia University with a passion for building innovative solutions and turning ideas into reality. I continue to solve complex problems and creating impactful, cutting-edge technology.</p>
                 </div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+    <h2>My Projects</h2>
+    <p class="section-intro">
+        Here are some of the projects I've worked on. They showcase my skills in software development, from system design to building user-friendly applications.
+    </p>
+
+    <div class="projects-grid">
+
+        <!-- Project 1: Chat Client -->
+        <div class="project-card">
+            <div class="project-card-content">
+                <h3>Chat Client</h3>
+                <p>A client-server chat application built in C, using TCP/IP sockets for reliable, real-time communication. Features a multi-threaded server to concurrently manage multiple client connections.</p>
+                <div class="project-tags">
+                    <span class="tag">C</span>
+                    <span class="tag">Sockets</span>
+                    <span class="tag">TCP/IP</span>
+                    <span class="tag">Multi-threading</span>
+                </div>
+                <!-- IMPORTANT: Replace '#' with the actual link to your GitHub repository -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 2: Minishell -->
+        <div class="project-card">
+            <div class="project-card-content">
+                <h3>Minishell</h3>
+                <p>A custom micro shell developed in C using POSIX libraries. Implements core shell features like built-in commands (cd, exit), I/O redirection, and robust signal handling.</p>
+                <div class="project-tags">
+                    <span class="tag">C</span>
+                    <span class="tag">POSIX API</span>
+                    <span class="tag">Unix/Linux</span>
+                    <span class="tag">Process Control</span>
+                </div>
+                <!-- IMPORTANT: Replace '#' with the actual link to your GitHub repository -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 3: CodePath iOS Development -->
+        <div class="project-card">
+            <div class="project-card-content">
+                <h3>CodePath iOS Development</h3>
+                <p>A project-based exploration of mobile app development. Designed and implemented RESTful API clients, building three fully functional apps using APIs from platforms like Tumblr, Yelp, and Twitter.</p>
+                <div class="project-tags">
+                    <span class="tag">iOS</span>
+                    <span class="tag">Swift</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">Mobile Dev</span>
+                </div>
+                <!-- IMPORTANT: Replace '#' with the actual link to your GitHub repository -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 4: Snake Game -->
+        <div class="project-card">
+            <div class="project-card-content">
+                <h3>Snake Game</h3>
+                <p>A Python-based replica of the classic Snake game. Developed a graphical user interface and core gameplay mechanics from scratch using the Tkinter GUI library.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">GUI</span>
+                </div>
+                <!-- IMPORTANT: Replace '#' with the actual link to your GitHub repository -->
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="resume-container">
+        <section class="resume-section">
+            <h2>Experience</h2>
+
+            <div class="resume-entry">
+                <h3>Lab Assistant</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Columbia University, Carleton Laboratory | New York, NY</span>
+                    <span class="entry-date">May 2025-Present</span>
+                </div>
+                <ul class="entry-description">
+                    <li>Managed the end-to-end lifecycle of cloud infrastructure, including the reinstallation and implementation of computer systems to modernize lab operations.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <h3>Data Analyst Intern</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Kurt S. Adler, Inc. | New York, NY</span>
+                    <span class="entry-date">May 2024-Aug 2024</span>
+                </div>
+                <ul class="entry-description">
+                    <li>Engineered data pipelines to process financial reports, reducing data processing time by 20% by scripting solutions in Excel and Tecsys Pointforce.</li>
+                    <li>Developed predictive credit risk models and built dynamic Power BI dashboards to visualize complex datasets, directly leading to a 35% reduction in default risk.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <h3>Information Technology (IT) Assistant</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Fordham University | New York, NY</span>
+                    <span class="entry-date">May 2023-Aug 2023</span>
+                </div>
+                <ul class="entry-description">
+                    <li>Managed and resolved 100+ weekly tech support tickets via ServiceNow, ensuring fast turnaround and minimizing downtime for staff and students in a high-volume IT support environment.</li>
+                    <li>Diagnosed and resolved network connectivity issues and debugged software configuration problems.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <h3>Computer Science & Math Tutor</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Fordham University | New York, NY</span>
+                    <span class="entry-date">Mar 2022 - Dec 2023</span>
+                </div>
+                <ul class="entry-description">
+                    <li>Mentored 40 students in core software engineering concepts, including data structures, algorithms, system design, and object-oriented programming.</li>
+                </ul>
+            </div>
+        </section>
+  
+        <section class="resume-section">
+            <h2>Education</h2>
+
+            <div class="resume-entry">
+                <h3>Bachelor of Science in Computer Science and Math (GPA: 3.53/4.00)</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Fordham University | New York, NY</span>
+                    <span class="entry-date">May 2026</span>
+                </div>
+            </div>
+            <div class="resume-entry">
+                <h3>Bachelor of Science in Civil Engineering, Combined Plan Engineering Program</h3>
+                <div class="entry-meta">
+                    <span class="entry-location">Columbia University, School of Engineering and Applied Science | New York, NY</span>
+                    <span class="entry-date">May 2026</span>
+                </div>
+                <p><strong>Relevant Courseworks:</strong> C++OOP, Data Structures & Algorithms, Database Systems, Computer Organization, Theory of Computation, Advanced Programming.</p>
             </div>
         </section>
 
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <p><strong>Programming:</strong> C, C++, Java, Python, JavaScript, Bash, MATLAB</p>
+                <p><strong>Web & Database:</strong> HTML, CSS, SQL</p>
+                <p><strong>Tools:</strong> Git, Unix, Power BI, LaTeX, Visual Studio, VS Code, IntelliJ, AutoCAD, Microsoft Office</p>
+            </div>
+        </section>
 
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-        </div>
-    </section>
-   
-<div class="resume-content-area"> <div class="resume-body-columns">
-        <main class="resume-main-column">
-            <section class="resume-section" id="experience">
-                <h2>Work Experience</h2>
-                <div class="experience-entry">
-                    <h4>Credit and Collections Analyst Intern</h4>
-                    <p class="company-info"><strong>Kurt S. Adler, Inc.</strong> | New York, NY | <span class="date">May 2024 - Aug 2024</span></p>
-                    <ul>
-                        <li>Engineered and automated Excel-based financial reporting processes using Tecsys Pointforce, reducing data processing time by 20%.</li>
-                        <li>Developed Excel-based credit risk models using statistical analysis and trend forecasting, visualized key metrics in Power BI dashboards to support decision-making, resulting in a 35% drop in default risk and improved customer retention.</li>
-                        <li>Trained new hires on credit systems and accelerated onboarding for faster workflow adoption.</li>
-                    </ul>
-                </div>
-                <div class="experience-entry">
-                    <h4>Information Technology (IT) Assistant</h4>
-                    <p class="company-info"><strong>Fordham University</strong> | New York, NY | <span class="date">May 2023 - Aug 2023</span></p>
-                    <ul>
-                        <li>Managed and resolved 100+ weekly tech support tickets via ServiceNow, ensuring fast turnaround and minimizing downtime for staff and students in a high-volume IT support environment.</li>
-                        <li>Optimized client communication workflows through troubleshooting hardware/software conflicts.</li>
-                        <li>Collaborated with IT/engineering teams to resolve high-priority network and software issues, demonstrating adaptability in cross-functional technical environments.</li>
-                    </ul>
-                </div>
-                <div class="experience-entry">
-                    <h4>Computer Science & Math Tutor</h4>
-                    <p class="company-info"><strong>Freelance Tutor</strong> | New York, NY | <span class="date">Mar 2022 - Dec 2023</span></p>
-                    <ul>
-                        <li>Mentored 40+ students in core software engineering concepts, including data structures, algorithms, system design, and object-oriented programming.</li>
-                        <li>Cultivated a growth mindset by teaching agile methodologies, version control (Git), and best practices in software architecture, mirroring industry standards.</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-
-        <aside class="resume-sidebar-column">
-            <section class="resume-section" id="education">
-                <h2>Education</h2>
-                <div class="education-entry">
-                    <h3>(3-2) Combined Plan Engineering Program</h3>
-                    <p class="institution"><strong>Fordham University</strong> | New York, NY</p>
-                    <p class="degree">Bachelor of Science in Computer Science and Math (GPA: 3.53/4.00)</p>
-                    <p class="date">Graduation Date: May 2026</p>
-                </div>
-                <div class="education-entry">
-                    <p class="institution"><strong>Columbia University, School of Engineering and Applied Science</strong> | New York, NY</p>
-                    <p class="degree">Bachelor of Science in Civil Engineering (GPA: 3.42/4.00)</p>
-                    <p class="date">Graduation Date: May 2026</p>
-                </div>
-            </section>
-
-            <section class="resume-section" id="skills">
-                <h2>Skills</h2>
-                <div class="skills-category">
-                    <p><strong>Programming:</strong> Python, C++, C, MATLAB, JavaScript, SQL</p>
-                </div>
-                <div class="skills-category">
-                    <p><strong>Other:</strong> Git, Linux, Bash, HTML, CSS, Unix, Power BI, LaTeX, Visual Studio, VS Code, Microsoft Office</p>
-                </div>
-            </section>
-        </aside>
-    </div> </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -105,74 +199,6 @@
                 </ul>
         </div>
     </footer>
-
-    <script>
-        const mainContent = document.getElementById('hero-text-content');
-
-        function typewriterEffect(element, text, speed = 1) { // Default speed is now 0
-            let i = 0;
-            const textToType = text || "";
-            element.textContent = ''; 
-
-            function type() {
-                if (i < textToType.length) {
-                    element.textContent += textToType.charAt(i);
-                    i++;
-                    // Characters will appear very rapidly due to speed being 0
-                    setTimeout(type, speed); 
-                }
-            }
-            type(); 
-        }
-
-        function startTextAnimations() {
-            // No outer setTimeout delay here
-            
-            const animatedElementsNodeList = mainContent.querySelectorAll('[data-animate-text-target]');
-            let animatedElementsArray = Array.from(animatedElementsNodeList);
-
-            // Sort elements by their vertical position on the page (top-to-bottom)
-            animatedElementsArray.sort((a, b) => {
-                const topA = a.getBoundingClientRect().top;
-                const topB = b.getBoundingClientRect().top;
-                return topA - topB;
-            });
-
-            // Iterate through the sorted elements and apply the typewriter effect
-            animatedElementsArray.forEach((el, index) => {
-                const textToType = el.dataset.originalText;
-                if (typeof textToType === 'string') {
-                    // No stagger setTimeout delay - call typewriterEffect directly
-                    // Pass 0 for speed, or rely on the function's new default
-                    typewriterEffect(el, textToType, 20); 
-                } else {
-                    console.warn("Element found for animation, but 'data-original-text' is missing or not a string:", el);
-                }
-            });
-        }
-
-        // The window.addEventListener('load', ...) block remains the same for preparation:
-        window.addEventListener('load', () => {
-            console.log('Page content fully loaded, preparing text animations.');
-
-            // Make sure mainContent is correctly identified
-            const mainContent = document.getElementById('hero-text-content');
-            if (!mainContent) {
-                console.error("Error: Could not find element with ID 'hero-text-content'. Animations will not run.");
-                return;
-            }
-
-            // Prepare elements for animation: store original text and clear current content.
-            const elementsToAnimate = mainContent.querySelectorAll('[data-animate-text-target]');
-            elementsToAnimate.forEach(el => {
-                el.dataset.originalText = el.textContent ? el.textContent.trim() : "";
-                el.textContent = ''; // Cleared to be typed out
-            });
-
-            // Start the text animations without the previous delays
-            startTextAnimations();
-        });
-    </script>
-
+    <script src="javascript.js"></script>
 </body>
 </html>
