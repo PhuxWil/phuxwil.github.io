@@ -17,7 +17,6 @@ function typewriterEffect(element, text, speed = 1) { // Default speed is now 0
 }
 
 function startTextAnimations() {
-    // No outer setTimeout delay here
     
     const animatedElementsNodeList = mainContent.querySelectorAll('[data-animate-text-target]');
     let animatedElementsArray = Array.from(animatedElementsNodeList);
@@ -29,12 +28,9 @@ function startTextAnimations() {
         return topA - topB;
     });
 
-    // Iterate through the sorted elements and apply the typewriter effect
     animatedElementsArray.forEach((el, index) => {
         const textToType = el.dataset.originalText;
         if (typeof textToType === 'string') {
-            // No stagger setTimeout delay - call typewriterEffect directly
-            // Pass 0 for speed, or rely on the function's new default
             typewriterEffect(el, textToType, 20); 
         } else {
             console.warn("Element found for animation, but 'data-original-text' is missing or not a string:", el);
@@ -42,24 +38,20 @@ function startTextAnimations() {
     });
 }
 
-// The window.addEventListener('load', ...) block remains the same for preparation:
 window.addEventListener('load', () => {
     console.log('Page content fully loaded, preparing text animations.');
 
-    // Make sure mainContent is correctly identified
     const mainContent = document.getElementById('hero-text-content');
     if (!mainContent) {
         console.error("Error: Could not find element with ID 'hero-text-content'. Animations will not run.");
         return;
     }
 
-    // Prepare elements for animation: store original text and clear current content.
     const elementsToAnimate = mainContent.querySelectorAll('[data-animate-text-target]');
     elementsToAnimate.forEach(el => {
         el.dataset.originalText = el.textContent ? el.textContent.trim() : "";
-        el.textContent = ''; // Cleared to be typed out
+        el.textContent = ''; 
     });
 
-    // Start the text animations without the previous delays
     startTextAnimations();
 })
